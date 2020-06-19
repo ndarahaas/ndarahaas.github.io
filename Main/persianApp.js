@@ -18,18 +18,30 @@ async function getData() {
   const Sync = document.getElementById("sync").value;
 
   if (Sync === "زیاد") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "پیروزی "),
-        (document.getElementById("result").style.color = "green"))
-      : ((document.getElementById("result").innerHTML = "باخت"),
-        (document.getElementById("result").style.color = "red"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "پیروزی "),
+          (document.getElementById("result").style.color = "green"))
+        : ((document.getElementById("result").innerHTML = "باخت"),
+          (document.getElementById("result").style.color = "red"));
+    }
   }
   if (Sync === "کم") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "باخت"),
-        (document.getElementById("result").style.color = "red"))
-      : ((document.getElementById("result").innerHTML = "پیروزی"),
-        (document.getElementById("result").style.color = "green"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "باخت"),
+          (document.getElementById("result").style.color = "red"))
+        : ((document.getElementById("result").innerHTML = "پیروزی"),
+          (document.getElementById("result").style.color = "green"));
+    }
   }
 }
 

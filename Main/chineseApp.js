@@ -18,18 +18,30 @@ async function getData() {
   const Sync = document.getElementById("sync").value;
 
   if (Sync === "高") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "赢 "),
-        (document.getElementById("result").style.color = "green"))
-      : ((document.getElementById("result").innerHTML = "输"),
-        (document.getElementById("result").style.color = "red"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "赢 "),
+          (document.getElementById("result").style.color = "green"))
+        : ((document.getElementById("result").innerHTML = "输"),
+          (document.getElementById("result").style.color = "red"));
+    }
   }
   if (Sync === "低") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "输"),
-        (document.getElementById("result").style.color = "red"))
-      : ((document.getElementById("result").innerHTML = "赢"),
-        (document.getElementById("result").style.color = "green"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "输"),
+          (document.getElementById("result").style.color = "red"))
+        : ((document.getElementById("result").innerHTML = "赢"),
+          (document.getElementById("result").style.color = "green"));
+    }
   }
 }
 

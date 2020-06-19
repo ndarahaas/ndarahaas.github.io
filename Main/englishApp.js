@@ -18,19 +18,31 @@ async function getData() {
   const Sync = document.getElementById("sync").value;
 
   if (Sync === "High") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1];
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "WIN "),
-        (document.getElementById("result").style.color = "green"))
-      : ((document.getElementById("result").innerHTML = "LOSE"),
-        (document.getElementById("result").style.color = "red"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1];
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "WIN "),
+          (document.getElementById("result").style.color = "green"))
+        : ((document.getElementById("result").innerHTML = "LOSE"),
+          (document.getElementById("result").style.color = "red"));
+    }
   }
   if (Sync === "Low") {
-    newClanTag[Character - 1] > opponentClanTag[Character - 1]
-      ? ((document.getElementById("result").innerHTML = "LOSE"),
-        (document.getElementById("result").style.color = "red"))
-      : ((document.getElementById("result").innerHTML = "WIN"),
-        (document.getElementById("result").style.color = "green"));
+    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+      alert(
+        "Please Select another character....Since both the characters are equal"
+      );
+    } else {
+      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+        ? ((document.getElementById("result").innerHTML = "LOSE"),
+          (document.getElementById("result").style.color = "red"))
+        : ((document.getElementById("result").innerHTML = "WIN"),
+          (document.getElementById("result").style.color = "green"));
+    }
   }
 }
 
