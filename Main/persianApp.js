@@ -8,6 +8,9 @@ async function getData() {
   const opponentClanTag = data.opponent.tag.replace("#", "");
   var opponentClanTag2 = data.opponent.tag.replace(/#/g, "");
   opponentClanTag2 = data.opponent.tag.replace("0", "O");
+  const url2 = `https://clash.clashperk.xyz/v1/clans/%23${opponentClanTag}`;
+  const data2 = await fetch(url2, { method: "GET" }).then((res) => res.json());
+  document.getElementById("opponentDescription").innerHTML = data2.description;
   document.getElementById("opponentTag").innerHTML = opponentClanTag2;
   document.getElementById("opponentName").innerHTML = data.opponent.name;
   document.getElementById("link").innerHTML = "(CC Status)";
