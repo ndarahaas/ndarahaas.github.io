@@ -11,6 +11,7 @@ async function getData() {
   const url2 = `https://clash.clashperk.xyz/v1/clans/%23${opponentClanTag}`;
   const data2 = await fetch(url2, { method: "GET" }).then((res) => res.json());
   document.getElementById("opponentDescription").innerHTML = data2.description;
+  document.getElementById("opponentMembers").innerHTML = data2.members;
   document.getElementById("opponentTag").innerHTML = opponentClanTag2;
   document.getElementById("opponentName").innerHTML = data.opponent.name;
   document.getElementById("link").innerHTML = "(CC Status)";
@@ -21,6 +22,12 @@ async function getData() {
 
   const Character = document.getElementById("character").value;
   const Sync = document.getElementById("sync").value;
+  if (Sync === "---") {
+    alert("Please select Sync type");
+  }
+  if (Character === "---") {
+    alert("Please select the character to be compared with");
+  }
 
   if (Sync === "高") {
     if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
