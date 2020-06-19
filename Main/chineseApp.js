@@ -6,6 +6,8 @@ async function getData() {
   const data = await fetch(url, { method: "GET" }).then((res) => res.json());
 
   const opponentClanTag = data.opponent.tag.replace("#", "");
+  opponentClanTag = data.opponent.tag.replace(/#/g, "");
+  opponentClanTag = data.opponent.tag.replace("0", "O");
   document.getElementById("opponentTag").innerHTML = opponentClanTag;
   document.getElementById("opponentName").innerHTML = data.opponent.name;
   document.getElementById("link").innerHTML = "(CC Status)";
