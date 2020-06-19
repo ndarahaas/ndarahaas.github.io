@@ -1,0 +1,31 @@
+.container {
+  height: 400px;
+  width: 810px;
+  margin: 40px auto;
+  padding: 5px;
+  font-family: "Sriracha", cursive;
+}
+
+#main {
+  background-color: #63d2ff;
+  margin: 5px;
+  border-left: 5px solid #2081c3;
+  padding: 10px;
+}
+
+table {
+  text-align: left;
+}
+
+button {
+  margin: 5px;
+}
+a {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  color: darkgrey;
+  font-weight: 300em;
+}
