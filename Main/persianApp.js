@@ -6,9 +6,9 @@ async function getData() {
   const data = await fetch(url, { method: "GET" }).then((res) => res.json());
 
   const opponentClanTag = data.opponent.tag.replace("#", "");
-  opponentClanTag = data.opponent.tag.replace("0", "O");
-  opponentClanTag = data.opponent.tag.replace(/#/g, "");
-  document.getElementById("opponentTag").innerHTML = opponentClanTag;
+  var opponentClanTag2 = data.opponent.tag.replace(/#/g, "");
+  opponentClanTag2 = data.opponent.tag.replace("0", "O");
+  document.getElementById("opponentTag").innerHTML = opponentClanTag2;
   document.getElementById("opponentName").innerHTML = data.opponent.name;
   document.getElementById("link").innerHTML = "(CC Status)";
 
@@ -20,12 +20,12 @@ async function getData() {
   const Sync = document.getElementById("sync").value;
 
   if (Sync === "زیاد") {
-    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
         ? ((document.getElementById("result").innerHTML = "پیروزی "),
           (document.getElementById("result").style.color = "green"))
         : ((document.getElementById("result").innerHTML = "باخت"),
@@ -33,12 +33,12 @@ async function getData() {
     }
   }
   if (Sync === "کم") {
-    if (newClanTag[Character - 1] === opponentClanTag[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
         ? ((document.getElementById("result").innerHTML = "باخت"),
           (document.getElementById("result").style.color = "red"))
         : ((document.getElementById("result").innerHTML = "پیروزی"),
