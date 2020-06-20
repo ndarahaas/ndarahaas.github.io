@@ -30,12 +30,12 @@ async function getData() {
   }
 
   if (Sync === "高") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "赢 "),
           (document.getElementById("result").style.color = "green"))
         : ((document.getElementById("result").innerHTML = "输"),
@@ -43,12 +43,12 @@ async function getData() {
     }
   }
   if (Sync === "低") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "输"),
           (document.getElementById("result").style.color = "red"))
         : ((document.getElementById("result").innerHTML = "赢"),

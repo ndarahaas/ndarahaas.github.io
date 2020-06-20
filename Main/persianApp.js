@@ -29,12 +29,12 @@ async function getData() {
     alert("Please select the character to be compared with");
   }
   if (Sync === "زیاد") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "پیروزی "),
           (document.getElementById("result").style.color = "green"))
         : ((document.getElementById("result").innerHTML = "باخت"),
@@ -42,12 +42,12 @@ async function getData() {
     }
   }
   if (Sync === "کم") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character - 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "باخت"),
           (document.getElementById("result").style.color = "red"))
         : ((document.getElementById("result").innerHTML = "پیروزی"),
