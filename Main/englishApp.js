@@ -24,19 +24,16 @@ async function getData() {
 
   const Character = document.getElementById("character").value;
   const Sync = document.getElementById("sync").value;
-  if (Sync === "---") {
-    alert("Please select Sync type");
+  if (Sync === "---" || Character === "---") {
+    alert("Missing Sync / Character Type");
   }
-  if (Character === "---") {
-    alert("Please select the character to be compared with");
-  }
+
   if (Sync === "High") {
     if (newClanTag[Character - 1] === opponentClanTag2[Character - 1]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character - 1];
       newClanTag[Character - 1] > opponentClanTag2[Character - 1]
         ? ((document.getElementById("result").innerHTML = "WIN "),
           (document.getElementById("result").style.color = "green"))
