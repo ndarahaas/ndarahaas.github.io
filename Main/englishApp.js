@@ -31,12 +31,12 @@ async function getData() {
   }
 
   if (Sync === "High") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character + 1]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character]
+      newClanTag[Character - 1] > opponentClanTag2[Character + 1]
         ? ((document.getElementById("result").innerHTML = "WIN "),
           (document.getElementById("result").style.color = "green"))
         : ((document.getElementById("result").innerHTML = "LOSE"),
@@ -44,12 +44,12 @@ async function getData() {
     }
   }
   if (Sync === "Low") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character + 1]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character]
+      newClanTag[Character - 1] > opponentClanTag2[Character + 1]
         ? ((document.getElementById("result").innerHTML = "LOSE"),
           (document.getElementById("result").style.color = "red"))
         : ((document.getElementById("result").innerHTML = "WIN"),
