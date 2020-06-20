@@ -2,6 +2,7 @@ async function getData() {
   const ClanTag = document.getElementById("clanTag").value;
   var newClanTag = ClanTag.replace("#", "");
   newClanTag = ClanTag.replace("0", "O");
+  console.log("Player Clan Fetch Successful");
   const url = `https://clash.clashperk.xyz/v1/clans/%23${newClanTag}/currentwar`;
 
   const data = await fetch(url, { method: "GET" })
@@ -9,8 +10,8 @@ async function getData() {
     .catch((err) => (document.getElementById("result").innerHTML = err));
 
   const opponentClanTag = data.opponent.tag.replace("#", "");
-  var opponentClanTag2 = data.opponent.tag.replace("#", "");
-  opponentClanTag2 = data.opponent.tag.replace("0", "O");
+  var opponentClanTag2 = data.opponent.tag.replace(/0/g, "O");
+  console.log("Opponent Clan fetch successful");
 
   const url2 = `https://clash.clashperk.xyz/v1/clans/%23${opponentClanTag}`;
   const data2 = await fetch(url2, { method: "GET" }).then((res) => res.json());
@@ -31,12 +32,12 @@ async function getData() {
   }
 
   if (Sync === "High") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character + 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character + 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "WIN "),
           (document.getElementById("result").style.color = "green"))
         : ((document.getElementById("result").innerHTML = "LOSE"),
@@ -44,12 +45,12 @@ async function getData() {
     }
   }
   if (Sync === "Low") {
-    if (newClanTag[Character - 1] === opponentClanTag2[Character + 1]) {
+    if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
     } else {
-      newClanTag[Character - 1] > opponentClanTag2[Character + 1]
+      newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "LOSE"),
           (document.getElementById("result").style.color = "red"))
         : ((document.getElementById("result").innerHTML = "WIN"),
