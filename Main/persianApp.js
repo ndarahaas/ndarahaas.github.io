@@ -21,17 +21,17 @@ async function getData() {
 
   const Character = document.getElementById("character").value;
   const Sync = document.getElementById("sync").value;
-  if (Sync === "---") {
-    alert("Please select Sync type");
-  }
-  if (Character === "---") {
-    alert("Please select the character to be compared with");
+  if (Sync === "---" || Character === "---") {
+    alert("Missing Sync / Character Type");
   }
   if (Sync === "زیاد") {
     if (newClanTag[Character - 1] === opponentClanTag2[Character]) {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
+      (document.getElementById("result").innerHTML =
+        "هر دو شخصیت برابر هستند ، شخصیت های بعدی را امتحان کنید "),
+        (document.getElementById("result").style.color = "blue");
     } else {
       newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "پیروزی "),

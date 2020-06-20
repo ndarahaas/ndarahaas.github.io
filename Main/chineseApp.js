@@ -22,11 +22,8 @@ async function getData() {
 
   const Character = document.getElementById("character").value;
   const Sync = document.getElementById("sync").value;
-  if (Sync === "---") {
-    alert("Please select Sync type");
-  }
-  if (Character === "---") {
-    alert("Please select the character to be compared with");
+  if (Sync === "---" || Character === "---") {
+    alert("Missing Sync / Character Type");
   }
 
   if (Sync === "高") {
@@ -34,6 +31,9 @@ async function getData() {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
+      (document.getElementById("result").innerHTML =
+        "两个字符相等，请尝试下一个字符"),
+        (document.getElementById("result").style.color = "blue");
     } else {
       newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "赢 "),

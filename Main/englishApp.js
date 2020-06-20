@@ -36,6 +36,9 @@ async function getData() {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
+      (document.getElementById("result").innerHTML =
+        "Characters Equal try next character "),
+        (document.getElementById("result").style.color = "blue");
     } else {
       newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "WIN "),
@@ -49,6 +52,8 @@ async function getData() {
       alert(
         "Please Select another character....Since both the characters are equal"
       );
+      (document.getElementById("result").innerHTML = "Characters Equal "),
+        (document.getElementById("result").style.color = "blue");
     } else {
       newClanTag[Character - 1] > opponentClanTag2[Character]
         ? ((document.getElementById("result").innerHTML = "LOSE"),
