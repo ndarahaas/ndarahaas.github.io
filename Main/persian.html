@@ -19,8 +19,29 @@
             <tr>
                 <td>
                 <p><b>برچسب قبیله ای:</b>
-                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"><button id="sub" class="btn btn-success">ارسال</button></input>
-                </p></td></tr>
+                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"></input>
+                </p></td>
+                <td>شخصیت را انتخاب کنید : <select id="character" name="day">
+                    <option>---</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    نوع همگام سازی :  <select id="sync" name="sync">
+                        <option>---</option>
+                        <option>زیاد</option>
+                        <option>کم</option>
+                </td>
+            
+            
+            
+            
+            </tr>
                 <tr>
                     <td>
                 <p><b>برچسب مخالف : </b> <span id="opponentTag"></span></p></td>
@@ -30,26 +51,13 @@
                 <tr><td><p><b>اعضا : </b><span id="opponentMembers"></span></p></td></tr>
                     </tr>
                 <tr>
-                    <td>شخصیت را انتخاب کنید : <select id="character" name="day">
-                        <option>---</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                        
-                    </td>
-                    <td>
-                        نوع همگام سازی :  <select id="sync" name="sync">
-                            <option>---</option>
-                            <option>زیاد</option>
-                            <option>کم</option>
-                    </td>
+                    
+                    
                 </tr>
                 <tr>
                     <td>
                     <h3>Result: <span id="result"></span></h3></td>
+                    <td><button id="sub" class="btn btn-success">ارسال</button></td>
 
                 </tr>
                 </table>

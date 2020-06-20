@@ -16,6 +16,14 @@
 table {
   text-align: left;
 }
+tr {
+  margin: 5px;
+}
+td {
+  margin: 3px;
+  align-items: center;
+  border: 30px solid #63d2ff;
+}
 
 button {
   margin: 5px;
@@ -26,6 +34,11 @@ a {
 
 footer {
   text-align: center;
-  color: darkgrey;
-  font-weight: 300em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #21243d;
+  color: white;
+  text-align: center;
 }

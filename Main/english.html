@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
+        <div id="click" class="container">
             <h1> OL🍊 / Zero(Z盟)</h1>
             <br>
             <div id="main"> <table>
@@ -17,8 +17,25 @@
             <tr>
                 <td>
                 <p><b>Enter your Clan tag :</b>
-                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"><button id="sub" class="btn btn-success">submit</button></input>
-                </p></td></tr>
+                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"></input>
+                </p></td>
+                <td>Select the Character : <select id="character" name="day">
+                    <option>---</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    Select Sync Type :  <select id="sync" name="sync">
+                        <option>---</option>
+                        <option>High </option>
+                        <option>Low </option>
+                </td>
+            </tr>
                 <tr>
                     <td>
                 <p><b>Opponent Clan tag : </b> <span id="opponentTag"></span></p></td>
@@ -27,27 +44,11 @@
             </tr>
             <tr><td><p><b>Opponent Clan description : </b><span id="opponentDescription"></span></p></td></tr>
             <tr><td><p><b>Members : </b><span id="opponentMembers"></span></p></td></tr>
-                <tr>
-                    <td>Select the Character : <select id="character" name="day">
-                        <option>---</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                        
-                    </td>
-                    <td>
-                        Select Sync Type :  <select id="sync" name="sync">
-                            <option>---</option>
-                            <option>High </option>
-                            <option>Low </option>
-                    </td>
-                </tr>
+
                 <tr>
                     <td>
                     <h3>Result: <b><span id="result"></span></b></h3></td>
+                    <td><button id="sub" class="btn btn-success">submit</button></td>
 
                 </tr>
                 </table>

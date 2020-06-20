@@ -17,8 +17,25 @@
             <tr>
                 <td>
                 <p><b>部落标签 :</b>
-                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"><button id="sub" class="btn btn-success">提交</button></input>
-                </p></td></tr>
+                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"></input>
+                </p></td>
+                <td>选择角色 : <select id="character" name="day">
+                    <option>---</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    选择高/低  <select id="sync" name="sync">
+                        <option>---</option>
+                        <option>高 </option>
+                        <option>低</option>
+                </td>
+            </tr>
                 <tr>
                     <td>
                 <p><b>对手标签 : </b> <span id="opponentTag"></span></p></td>
@@ -28,27 +45,11 @@
                 <tr><td><p><b>会员 : </b><span id="opponentMembers"></span></p></td></tr>
 
             </tr>
-                <tr>
-                    <td>选择角色 : <select id="character" name="day">
-                        <option>---</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                        
-                    </td>
-                    <td>
-                        选择高/低  <select id="sync" name="sync">
-                            <option>---</option>
-                            <option>高 </option>
-                            <option>低</option>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                     <h3>结果: <span id="result"></span></h3></td>
+                    <td><button id="sub" class="btn btn-success">提交</button></td>
 
                 </tr>
                 </table>

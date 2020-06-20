@@ -65,3 +65,11 @@ async function getData() {
 }
 
 document.getElementById("sub").addEventListener("click", getData);
+
+document.getElementById("click").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("sub").click();
+    console.log("Enter Key was pressed");
+  }
+});
