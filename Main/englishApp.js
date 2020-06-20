@@ -1,6 +1,7 @@
 async function getData() {
   const ClanTag = document.getElementById("clanTag").value;
-  const newClanTag = ClanTag.replace("#", "");
+  var newClanTag = ClanTag.replace("#", "");
+  newClanTag = ClanTag.replace("0", "O");
   const url = `https://clash.clashperk.xyz/v1/clans/%23${newClanTag}/currentwar`;
 
   const data = await fetch(url, { method: "GET" })
