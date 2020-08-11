@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 
-    <head>
-       
-        <title>Clash Omega</title>
+<head>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="click" class="container">
-            <h1> OL🍊 / Zero(Z盟)</h1>
-            <br>
-            <div id="main"> <table>
+    <title>Clash Omega</title>
 
-            <tr>
-                <td>
-                <p><b>Enter your Clan tag :</b>
-                <input type = "text" id="clanTag" placeholder="Ex: Y8RURR8J"></input>
-                </p></td>
-                <td>Select the Character : <select id="character" name="day">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="click" class="container">
+        <h1 id='headingmain'> 🍊 Orange League Foreign Department🍊 </h1>
+        <br>
+        <div id="main">
+            <table>
+
+                <tr>
+                    <td>
+                        <p><b>Enter your Clan tag :</b>
+                            <input type="text" id="clanTag" placeholder="Ex: Y8RURR8J"></input>
+                        </p>
+                    </td>
+                    <!-- <td>Select the Character : <select id="character" name="day">
                     <option>---</option>
                     <option>1</option>
                     <option>2</option>
@@ -28,35 +32,54 @@
                     <option>5</option>
                     </select>
                     
-                </td>
-                <td>
-                    Select Sync Type :  <select id="sync" name="sync">
-                        <option>---</option>
-                        <option>High </option>
-                        <option>Low </option>
-                </td>
-            </tr>
-                <tr>
+                </td> -->
                     <td>
-                <p><b>Opponent Clan tag : </b> <span id="opponentTag"></span></p></td>
-                <br>
-                <tr><td><p><b>Opponent Clan Name : </b><span id="opponentName"> </span> <a id ="link" href=""><b></b></a></p></td></tr>
-            </tr>
-            <tr><td><p><b>Opponent Clan description : </b><span id="opponentDescription"></span></p></td></tr>
-            <tr><td><p><b>Members : </b><span id="opponentMembers"></span></p></td></tr>
-
-                <tr>
-                    <td>
-                    <h3>Result: <b><span id="result"></span></b></h3></td>
-                    <td><button id="sub" class="btn btn-success">submit</button></td>
-
+                        Select Sync Type : <select id="sync" name="sync">
+                            <option>---</option>
+                            <option>High </option>
+                            <option>Low </option>
+                    </td>
                 </tr>
-                </table>
-            </div>
+                <tr>
+                    <td>
+                        <p><b>Opponent Clan tag : </b> <span id="opponentTag"></span></p>
+                    </td>
+                    <br>
+                <tr>
+                    <td>
+                        <p><b>Opponent Clan Name : </b><span id="opponentName"> </span> <a id="link" href=""><b></b></a>
+                        </p>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Opponent Clan description : </b><span id="opponentDescription"></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Members : </b><span id="opponentMembers"></span></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Result: <b><span id="result"></span></b></h3>
+                    </td>
+                    <td><button id="sub" class="btn btn-success">submit</button></td>
+                    <br>
+<tr><td><b><span id='note'>Please check the Chocolate Clash and confirm whether is it a match or not</span></b></td></tr>
+                </tr>
+            </table>
         </div>
-       
-        
-        <script src="./englishApp.js" ></script>
-        <footer><p>Powered By ClashPerk</p></footer>
-    </body>
+    </div>
+
+
+    <script src="./englishApp.js"></script>
+    <footer>
+        <p>Powered By Clash Omega , Special thanks for Clashperk for tech support.</p>
+    </footer>
+</body>
+
 </html>
