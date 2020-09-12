@@ -137,6 +137,9 @@ async function getData() {
 }
 
 document.getElementById("sub").addEventListener("click", getData);
+document.getElementById("time").innerHTML= new Date(
+  "2020-09-13T15:45+05:30"
+).toLocaleString();
 
 document.getElementById("click").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
